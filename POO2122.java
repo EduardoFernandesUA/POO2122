@@ -57,7 +57,7 @@ public class POO2122 {
 		out.println(at1.listaPacotes());
 		System.out.println();
 		// Lista todas as reservas efetuadas e valor total de cada uma
-		// out.println(at1.listaReservas());
+		out.println(at1.listaReservas());
 
 	}
 

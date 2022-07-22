@@ -44,12 +44,12 @@ public class PacoteTuristico implements IPacoteTuristico {
     }
     @Override
     public int precoTotal(int numPessoas) {
-        // TODO Auto-generated method stub
-        return 0;
+        int total = numPessoas*nNoites*precoPessoa;
+        return (int) (total>12000 ? total*0.93 : total);
     }
 
     @Override
     public String toString() {
-        return String.format("Pacote Turístico %s: %d noites; %d / pessoa / noite", this.nome, this.nNoites, this.precoPessoa);
+        return String.format("Pacote Turístico %s: %d noites; %d € / pessoa / noite", this.nome, this.nNoites, this.precoPessoa);
     }
 }

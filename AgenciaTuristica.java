@@ -37,5 +37,12 @@ public class AgenciaTuristica {
         return ret;
     }
 
+    public String listaReservas() {
+        String ret = "Reservas efetuadas:\n";
+        for(Reserva reserva : reservas) {
+            ret += reserva + "\n";
+        }
+        return ret;
+    }
 
 }
