@@ -45,4 +45,17 @@ public class AgenciaTuristica {
         return ret;
     }
 
+    public PacoteTuristico getPacoteTuristico(String string) {
+        for(PacoteTuristico pacote : pacotesTuristicos) {
+            if(pacote.getNome().equals(string))
+                return pacote;
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s", this.nome, this.endereco);
+    }
+
 }

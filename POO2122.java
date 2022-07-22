@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 // Notas:
 // Não altere o código apresentado
@@ -17,7 +18,7 @@ public class POO2122 {
 		fl.close();
 	}
 
-	private static void test(PrintStream out) {
+	private static void test(PrintStream out) throws FileNotFoundException {
 		alinea1(out);
 		alinea2(out);
 	}
@@ -61,29 +62,44 @@ public class POO2122 {
 
 	}
 
-	private static void alinea2(PrintStream out) {
+	private static void alinea2(PrintStream out) throws FileNotFoundException {
 		out.println("\nAlínea 2) ----------------------------------\n");
-		AgenciaTuristica at2 = null; // modificar
+		AgenciaTuristica at2 = new AgenciaTuristica("SemoreAMexer", "Porto"); // modificar
 
 		// Adicione a seguir o código necessário para a leitura do ficheiro 
+
+		File file = new File("./agencia.txt");
+		Scanner sc = new Scanner(file);
+
+		while( sc.hasNextLine() ) {
+			String[] row = sc.nextLine().split(":");
+			if(row[0].equals("P")) {
+				String[] values = row[1].split(",");
+				at2.pacoteTuristico(values[0], Integer.parseInt(values[1]), Integer.parseInt(values[2]));
+			} else {
+				String[] values = row[1].split(",");
+				PacoteTuristico pacoteTuristico = at2.getPacoteTuristico(values[0]);
+				at2.reserva(pacoteTuristico, Integer.parseInt(values[1]));
+			}
+		}
 
 
 		// Não modifique o metodo a partir daqui
 		// Pode comentar para executar o programa
-		// if (at2 != null) {
-		// 	out.println("AGÊNCIA: " + at2);
-		// 	out.println();
-		// 	out.println("-- LISTA DE PACOTES ORDENADOS E FILTRADOS POR PREÇO --");	
-		// 	for (PacoteTuristico p: at2.pacotesPorPreco(350))	// devolve todos os pacotes turísticos da agencia com preço pessoa/noite inferior ao indicado, 
-		// 		out.println(p);										// ordenados do preço mais baixo ao mais alto
+		if (at2 != null) {
+			out.println("AGÊNCIA: " + at2);
+			out.println();
+			// out.println("-- LISTA DE PACOTES ORDENADOS E FILTRADOS POR PREÇO --");	
+			// for (PacoteTuristico p: at2.pacotesPorPreco(350))	// devolve todos os pacotes turísticos da agencia com preço pessoa/noite inferior ao indicado, 
+			// 	out.println(p);										// ordenados do preço mais baixo ao mais alto
 
 
-		// 	out.println();
-		// 	out.println("-- LISTA DE RESERVAS ORDENADAS POR PREÇO TOTAL --");	
-		// 	for (Reserva r: at2.reservasPorPreco())  				// devolve todas as reservas, ordenadas por preço total, de forma crescente
-		// 		out.println(r); 
+			// out.println();
+			// out.println("-- LISTA DE RESERVAS ORDENADAS POR PREÇO TOTAL --");	
+			// for (Reserva r: at2.reservasPorPreco())  				// devolve todas as reservas, ordenadas por preço total, de forma crescente
+			// 	out.println(r); 
 
-		// }
+		}
 	}
 
 }

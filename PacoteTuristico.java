@@ -48,6 +48,8 @@ public class PacoteTuristico implements IPacoteTuristico {
         return (int) (total>12000 ? total*0.93 : total);
     }
 
+    public String getNome() { return this.nome; }
+
     @Override
     public String toString() {
         return String.format("Pacote Turístico %s: %d noites; %d € / pessoa / noite", this.nome, this.nNoites, this.precoPessoa);

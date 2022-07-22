@@ -2,17 +2,17 @@
 Alínea 1) ----------------------------------
 
 Pacotes turísticos disponíveis:
-Pacote Turístico Calmaria: 7 noites; 600 € / pessoa / noite
-	** [V111] Voo QTR80V em 2022-08-02
-	** [A112] Alojamento CoolResort com 2, ocupação máxima 4 pessoas, em regime de TUDOINCLUIDO
-	** [T113] Transporte para 5 ocupantes, HIBRIDO, Kms máximos: 1000
-Pacote Turístico Tranquilidade: 5 noites; 290 € / pessoa / noite
-	** [V109] Voo TAP932 em 2022-07-30
-	** [A110] Alojamento B&B com 3, ocupação máxima 5 pessoas, em regime de PEQUENOALMOCO
 Pacote Turístico Descanso: 8 noites; 350 € / pessoa / noite
 	** [V114] Voo TAP1477 em 2022-08-10
 	** [A115] Alojamento GreatPlace com 1, ocupação máxima 3 pessoas, em regime de MEIAPENSAO
 	** [T117] Transporte para 2 ocupantes, ELETRICO, Kms máximos: 2000
+Pacote Turístico Tranquilidade: 5 noites; 290 € / pessoa / noite
+	** [V109] Voo TAP932 em 2022-07-30
+	** [A110] Alojamento B&B com 3, ocupação máxima 5 pessoas, em regime de PEQUENOALMOCO
+Pacote Turístico Calmaria: 7 noites; 600 € / pessoa / noite
+	** [V111] Voo QTR80V em 2022-08-02
+	** [A112] Alojamento CoolResort com 2, ocupação máxima 4 pessoas, em regime de TUDOINCLUIDO
+	** [T113] Transporte para 5 ocupantes, HIBRIDO, Kms máximos: 1000
 
 Reservas efetuadas:
 Reserva: Pacote Turístico Tranquilidade: 5 noites; 290 € / pessoa / noite para 3 pessoas. Valor total: 4350
@@ -22,4 +22,6 @@ Reserva: Pacote Turístico Não existe: 0 noites; 0 € / pessoa / noite para 1 
 
 
 Alínea 2) ----------------------------------
+
+AGÊNCIA: AgenciaTuristica@4fca772d
 
