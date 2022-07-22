@@ -8,9 +8,15 @@ public class Voo extends Servico {
     private Classe classe;
 
     Voo(String codigo, LocalDate data, Classe classe) {
+        super("V");
         this.codigo = codigo;
         this.data = data;
         this.classe = classe;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s Voo %s em %s", super.toString(), codigo, data.toString(), classe.toString());
     }
 
 }

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -5,17 +6,36 @@ import java.util.Set;
 public class AgenciaTuristica {
     private String nome;
     private String endereco;
-    private Set<PacoteTuristico> pacoteTuristicos;
+    private Set<PacoteTuristico> pacotesTuristicos;
     private List<Reserva> reservas;
 
     AgenciaTuristica(String nome, String endereco) {
         this.nome = nome;
         this.endereco = endereco;
+        this.pacotesTuristicos = new HashSet<>();
+        this.reservas = new ArrayList<>();
     }
 
     public PacoteTuristico pacoteTuristico(String nome, int nNoites, int precoPessoa) {
-        return new PacoteTuristico(nome, nNoites, precoPessoa);
+        PacoteTuristico pacoteTuristico = new PacoteTuristico(nome, nNoites, precoPessoa);
+        pacotesTuristicos.add(pacoteTuristico);
+        return pacoteTuristico;
     }
 
-    
+    public void reserva(PacoteTuristico pacoteTuristico, int numPessoas) {
+        reservas.add(new Reserva(pacoteTuristico, numPessoas));
+    }
+
+    public String listaPacotes() {
+        String ret = "Pacotes turísticos disponíveis:\n";
+        for(PacoteTuristico pacote : pacotesTuristicos) {
+            ret += pacote.toString() + "\n";
+            for(String servico : pacote.listaServicos()) {
+                ret += servico + "\n";
+            }
+        }
+        return ret;
+    }
+
+
 }

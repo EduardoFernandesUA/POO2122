@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 public class PacoteTuristico implements IPacoteTuristico {
@@ -24,13 +25,22 @@ public class PacoteTuristico implements IPacoteTuristico {
 
     @Override
     public PacoteTuristico adicionaServico(Servico servico) {
+        for(Servico s : this.servicos) {
+            if(s.getClass()==servico.getClass()) {
+                System.out.println("%% Não pode ser acrescentado outro serviço do tipo "+servico.getClass().getName());
+                return this;
+            }
+        }
         servicos.add(servico);
         return this;
     }
     @Override
     public Collection<String> listaServicos() {
-        // TODO Auto-generated method stub
-        return null;
+        LinkedList<String> ret = new LinkedList<>();
+        for(Servico servico : this.servicos) {
+            ret.add(String.format("\t** %s", servico));
+        }
+        return ret;
     }
     @Override
     public int precoTotal(int numPessoas) {

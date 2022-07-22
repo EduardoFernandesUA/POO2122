@@ -45,18 +45,18 @@ public class POO2122 {
 		p3.adicionaServico(new Transporte(2, 2000, Combustivel.ELETRICO));
 		System.out.println("Adicionado: " + p3);
 
-		// // Reservas (pacote selecionado e número de pessoas)
-		// System.out.println();
-		// at1.reserva(p1, 3);
-		// at1.reserva(p2, 4);
-		// at1.reserva(p3, 2);
-		// at1.reserva(new PacoteTuristico("Não existe", 0, 0), 1);
+		// Reservas (pacote selecionado e número de pessoas)
+		System.out.println();
+		at1.reserva(p1, 3);
+		at1.reserva(p2, 4);
+		at1.reserva(p3, 2);
+		at1.reserva(new PacoteTuristico("Não existe", 0, 0), 1);
 
-		// System.out.println(); System.out.println();
-		// // Lista todos os pacotes turísticos disponíveis
-		// out.println(at1.listaPacotes());
-		// System.out.println();
-		// // Lista todas as reservas efetuadas e valor total de cada uma
+		System.out.println(); System.out.println();
+		// Lista todos os pacotes turísticos disponíveis
+		out.println(at1.listaPacotes());
+		System.out.println();
+		// Lista todas as reservas efetuadas e valor total de cada uma
 		// out.println(at1.listaReservas());
 
 	}
